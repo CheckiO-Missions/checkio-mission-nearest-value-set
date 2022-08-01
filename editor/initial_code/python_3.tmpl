@@ -1,0 +1,23 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def nearest_value(values: set, one: int) -> int:
+    # your code here
+    return None
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(nearest_value({4, 7, 10, 11, 12, 17}, 9))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}nearest_value({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

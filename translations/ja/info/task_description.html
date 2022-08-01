@@ -1,0 +1,43 @@
+<!-- Describe task in general -->
+
+<p>
+    与えられた数値に一番近い数値を探す
+</p>
+
+<p>
+    数値の一覧が 集合として与えられます。その中から別に指示された数値と最も近い値を返してください。
+</p>
+
+<p>
+    例えば数値の一覧として4, 7, 10, 11, 12, 17が与えられ、指示された数値が9だとします。一覧の中で9より小さく9に一番近い数値は7、9より大きく9に一番近い数値は10です。ここで7より10の方が9に近いため、返すべき答えは10になります。
+</p>
+
+<p>詳細:</p>
+<ul>
+    <li>もし近しい数値が支持された数値に対して同じ近さの場合、小さい方を返してください;</li>
+    <li>数値の一覧には少なくとも1つ要素を持っています;</li>
+    <li>数値の一覧の中に、指示された数値が入っている場合、それ自身が答えです;</li>
+    <li>数値は正の場合も負の場合もありますが、整数です;</li>
+    <li>数値の一覧はソートされていない・重複がある場合もあります.</li>
+</ul>
+
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 2引数. {% if interpreter.slug == "js-node" %}配列{% else %}集合{% endif %}形式の数値の一覧. 指示された数値. 双方int
+</p>
+
+<p>
+    <strong>出力: </strong> Int. 
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>

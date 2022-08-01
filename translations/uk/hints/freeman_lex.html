@@ -1,0 +1,78 @@
+<body data-author="freeman_lex">
+    <div class="question-answer">
+        <div class="question">
+            На жаль, я не можу самостійно розвязати цю місію, ож підкинь мені ідейку у вірному напрямку!
+        </div>
+        <div class="answer">
+            <p>Дивись, ідея, яку я пропоную тобі для зрозумілого і поетапного розв'язання місії, наступна.
+            Перш за все, тобі потрібно створити змінні для збереження твої значень різниці між числами і числа на відстані цієї різниці.
+            Тоід, проходячи кожне число в сеті, ти маєш розраховувати абсолютну різницю (відстань) між цим числом і вхідним, яке передається параметром функції.
+            Якщо ця різниця менша за ту, що зберігається у відповідній змінній - онови значення змінних для різниці і числа на відстані цієї різниці.
+            Якщо різниця та ж сама, перевір чи число з сету менше за збережене в змінній. Якщо так - онови значення змінної
+            Ну і нарешті, після перевірки всього сету, поверни значення змінної числа із мінімальною відстанню.
+            </p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Виглядає зрозуміло, та мій код все ще не працює. Які функції я маю використати, щоб втілити цю ідею в коді?
+        </div>
+        <div class="answer">
+            <p>Дл успішного розв'зання місії у запропонований спосіб, відстань знаходь з<a target="_blank" href="https://docs.python.org/3/library/functions.html#abs">abs()</a>, менше число з <a target="_blank" href="https://docs.python.org/3/library/functions.html#min">min()</a>
+                і для проходження через сет - <a target="_blank" href="https://docs.python.org/3/reference/compound_stmts.html#for">for</a> цикл.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Чи міг би ти показати мені конкретніші частини коду?
+        </div>
+        <div class="answer">
+            <p>Окей, давай подивимось:</p>
+        <pre class="brush: python">
+def nearest_value(values: set, one: int) -> int:
+
+    min_dist, closest_num  = None, None # декларуємо початкову відстань і число на ній
+    # використай цикл for loop для проходження через сет:
+        dist = # використай abs() для розрахунку відстані між поточним
+               # значенням з сету і тим, що передане в параметрах функції
+        if min_dist == None or min_dist > dist: # перевірка початкового значення на існування
+                                  # і порівняння його із вище розрахованим
+            # онови значення змінних min_dist і closest_num
+        elif min_dist == dist: # якщо відстань така ж, як збережена
+            closest_num = ... # використай min(), що присвоїти їй значення меншого числа
+
+    return closest_num
+        </pre>    
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            І нарешті останнє питання. Як має виглядати мій код остаточно?
+        </div>
+        <div class="answer">
+            <pre class="brush: python">
+def nearest_value(values: set, one: int) -> int:
+    
+    min_dist, closest_num  = None, None
+    for value in values:
+        dist = abs(one - value)
+        if min_dist == None or min_dist > dist:
+            min_dist, closest_num = dist, value
+        elif min_dist == dist:
+            closest_num = min(value, closest_num)
+            
+    return closest_num
+            </pre>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Дякую! У мене все вийшло!
+        </div>
+        <div class="answer">
+            <p>Я радий це чути! Звертайся)</p>
+        </div>
+    </div>
+
+
+</body>
